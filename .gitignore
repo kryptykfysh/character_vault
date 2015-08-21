@@ -29,3 +29,6 @@
 # Environment files
 .ruby-vars
 .rbenv-vars
+
+# Database dump files
+dump.rdb

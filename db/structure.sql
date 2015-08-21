@@ -57,7 +57,10 @@ CREATE TABLE users (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     provider character varying,
-    uid character varying
+    uid character varying,
+    first_name character varying,
+    last_name character varying,
+    picture_url character varying
 );
 
 
@@ -139,4 +142,6 @@ SET search_path TO "$user",public;
 INSERT INTO schema_migrations (version) VALUES ('20150821010657');
 
 INSERT INTO schema_migrations (version) VALUES ('20150821041718');
+
+INSERT INTO schema_migrations (version) VALUES ('20150821233449');
 
