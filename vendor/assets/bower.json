@@ -1,0 +1,9 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "bootstrap-sass-official": "latest",
+    "angular": "latest",
+    "angular-mocks": "latest",
+    "angular-route": "latest"
+  }
+}
