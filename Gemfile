@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 # Devise authentication
 gem 'devise'
+# Google OAuth2 authentication
+gem 'omniauth-google-oauth2'
 # Bower for front end assets
 gem 'bower-rails'
 # Use Puma for server
@@ -33,6 +35,7 @@ gem 'puma'
 gem 'redis-rails'
 # And Rack-Cache for more caching!
 gem 'rack-cache'
+gem 'redis-rack-cache'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

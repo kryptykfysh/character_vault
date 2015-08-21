@@ -12,4 +12,6 @@
     -if alert.present?
       %aside.alert.alert.danger= alert
 
+    - if user_signed_in?
+      = current_user.email
     = yield
