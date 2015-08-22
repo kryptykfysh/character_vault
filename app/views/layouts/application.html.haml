@@ -6,7 +6,7 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body.container{ 'ng-app': 'base_app' }
+  %body.container{ 'ng-app': 'main' }
     = render 'shared/header_bar'
 
     -if notice.present?
