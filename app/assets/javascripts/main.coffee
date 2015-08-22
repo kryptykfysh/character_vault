@@ -15,7 +15,7 @@ app.config [
   '$routeProvider',
   ($routeProvider) ->
     $routeProvider.when('/',
-      controller: 'BaseCtrl',
-      templateUrl: 'base/index.html'
+      controller: 'HomeController',
+      templateUrl: 'home/index.html'
     )
 ]
