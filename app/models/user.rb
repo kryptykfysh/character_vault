@@ -1,4 +1,8 @@
+# coding: utf-8
+
 class User < ActiveRecord::Base
+  before_create { |user| user.api_key = user.generate_api_key }
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :rememberable, :trackable, :omniauthable,
@@ -24,5 +28,12 @@ class User < ActiveRecord::Base
         )
     end
     user
+  end
+
+  def generate_api_key
+    loop do
+      token = SecureRandom.base64.tr('+/=', 'Qrt')
+      break token unless User.exists?(api_key: token)
+    end
   end
 end

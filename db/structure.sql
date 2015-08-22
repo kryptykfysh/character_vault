@@ -60,7 +60,8 @@ CREATE TABLE users (
     uid character varying,
     first_name character varying,
     last_name character varying,
-    picture_url character varying
+    picture_url character varying,
+    api_key character varying
 );
 
 
@@ -96,6 +97,13 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 
 ALTER TABLE ONLY users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_users_on_api_key; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_api_key ON users USING btree (api_key);
 
 
 --
@@ -144,4 +152,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150821010657');
 INSERT INTO schema_migrations (version) VALUES ('20150821041718');
 
 INSERT INTO schema_migrations (version) VALUES ('20150821233449');
+
+INSERT INTO schema_migrations (version) VALUES ('20150822224757');
 
