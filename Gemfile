@@ -36,6 +36,8 @@ gem 'redis-rails'
 # And Rack-Cache for more caching!
 gem 'rack-cache'
 gem 'redis-rack-cache'
+# Angular templates
+gem 'angular-rails-templates'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

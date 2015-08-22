@@ -6,23 +6,17 @@ app = angular.module(
   ]
 )
 
-app.config([
+app.config [
   '$routeProvider',
   ($routeProvider) ->
-    $routeProvider.when(
-      '/',
-      {
-        controller: 'BaseController',
-        templateUrl: 'base.html'
-      }
-    ).when(
-      '/:something_else',
-      {
-        controller: 'SomethingElseController',
-        templateUrl: 'something_else.html'
-      }
+    $routeProvider.when('/',
+      controller: 'BaseController',
+      templateUrl: 'base/index.html'
+    ).when('/:something_else',
+      controller: 'SomethingElseController',
+      templateUrl: 'something_else.html'
     )
-])
+]
 
 app.controller(
   'BaseController',
